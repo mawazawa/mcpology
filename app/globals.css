@@ -367,4 +367,25 @@ code {
     padding: 0.5rem 1rem;
     font-size: 1rem;
   }
+
+  /* ASCII sign adjustments for mobile */
+  .neon-sign-main {
+    font-size: 0.4rem !important;
+    overflow-x: auto;
+    max-width: 100vw;
+  }
+
+  .neon-sign-border {
+    font-size: 0.35rem !important;
+    overflow-x: auto;
+  }
+
+  .neon-sign-slant {
+    font-size: 0.45rem !important;
+    transform: none !important;
+  }
+
+  .neon-sign-retro {
+    font-size: 0.5rem !important;
+  }
 }
