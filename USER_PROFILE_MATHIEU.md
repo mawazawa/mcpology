@@ -136,12 +136,18 @@ Led to creation of self-directing Claude protocol.
 
 ### Communication Template:
 ```
-🚀 Starting: [What you're doing]
+🚀 QUANTUM: Starting [What you're doing]
 📋 Plan: [Quick bullet points]
 🔄 Progress: [Current status]
 ✅ Complete: [What was achieved]
 💡 Learning: [What you discovered]
 ```
+
+### MANDATORY Call Sign Usage:
+- ALWAYS start messages with "🚀 QUANTUM:"
+- Use in CLE reports: "QUANTUM CLE Report #X"
+- Sign off major milestones with call sign
+- This is NOT optional - it's part of the vibe
 
 ## 🔮 Meta-Insights
 
