@@ -2,6 +2,9 @@
 
 > Like mixology, but for AI context servers
 
+🌐 **Live at: https://mcpology.com**  
+📦 **Open Source: https://github.com/mawazawa/mcpology**
+
 ## The Great Memory MCP Double-Dipping Incident™
 
 On June 26, 2025, at 2:00 AM PDT, what should have been a simple production deployment turned into a 45-minute debugging odyssey. The culprit? Memory MCP was "double-dipping" - running in multiple config files AND as zombie processes, causing schema validation errors that blocked every single command in Claude Code CLI.
@@ -45,9 +48,17 @@ Found an MCP that breaks Claude? Submit a PR with:
 - Date discovered
 - Alternative solutions
 
+## Contributing
+
+Found an MCP that breaks Claude? Submit a PR! We welcome contributions from the community. Just remember: **Devs Don't Kill My Vibe**.
+
 ## License
 
 MIT - Because debugging MCPs at 2 AM shouldn't be proprietary knowledge.
+
+## Credits
+
+Created with 🥃 by [d16p ventures](https://www.d16p.com) after too much debugging.
 
 ---
 
