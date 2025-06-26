@@ -1,0 +1,34 @@
+# MCPology LLMs.txt
+
+## Purpose
+MCPology is the definitive reference site for Model Context Protocol (MCP) servers, documenting which servers work reliably and which ones will break your Claude Code CLI with schema validation errors.
+
+## Audience
+- Vibe Coders who value working software over configuration hell
+- Developers building with Claude Code CLI or Claude Desktop
+- Anyone who has spent 45 minutes debugging "input_schema does not support oneOf, allOf, or anyOf"
+- Pioneers exploring the MCP ecosystem
+
+## Key Features
+- **The Blacklist**: MCP servers that cause schema validation errors, with exact error messages and dates
+- **The Whitelist**: Battle-tested MCPs with reliability ratings and tier system
+- **Personal Favorites**: Curated MCP combinations for specific use cases
+- **The Memory MCP Double-Dipping Incident™**: A cautionary tale from June 26, 2025
+
+## Important Context
+Many MCP servers use complex JSON schemas that are incompatible with Claude Code CLI's strict validation. The error "input_schema does not support oneOf, allOf, or anyOf at the top level" has become the bane of many developers' existence. This site documents which servers trigger these errors.
+
+## Technical Details
+- Built with Next.js 15, TypeScript, and brutalist design principles
+- Server-side rendered for AI crawler compatibility
+- No JavaScript required to view content
+- Mobile-first, fat-finger friendly design
+
+## Creator
+Created by d16p ventures after the infamous Memory MCP debugging session at 2 AM PDT on June 26, 2025.
+
+## Philosophy
+"Devs Don't Kill My Vibe" - We believe in software that works, not software that requires a PhD in JSON Schema to configure.
+
+## Contact
+Visit https://www.d16p.com for more projects focused on developer experience and vibe preservation.
