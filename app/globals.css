@@ -1,0 +1,259 @@
+/* Brutalist CSS - Gumroad/Gitingest style */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #000;
+  --fg: #fff;
+  --accent: #ff0;
+  --danger: #f00;
+  --success: #0f0;
+  --warning: #fa0;
+  --muted: #666;
+  --border: #333;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body {
+  font-family: 'Courier New', monospace;
+  background: var(--bg);
+  color: var(--fg);
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+/* Typography */
+h1 {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  border-bottom: 4px solid var(--accent);
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+.header {
+  border-bottom: 4px solid var(--border);
+  padding: 2rem 0;
+  margin-bottom: 3rem;
+}
+
+.ascii-header {
+  font-size: 0.75rem;
+  line-height: 1;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: var(--fg);
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--fg);
+  transition: all 0.2s;
+}
+
+.nav a:hover,
+.nav a.active {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+/* Cards */
+.card {
+  border: 2px solid var(--border);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--fg);
+}
+
+.card-meta {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.card-content {
+  line-height: 1.6;
+}
+
+/* Status Badges */
+.status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 2px solid;
+}
+
+.status.dead {
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+.status.incompatible {
+  color: var(--warning);
+  border-color: var(--warning);
+}
+
+.status.working {
+  color: var(--success);
+  border-color: var(--success);
+}
+
+.status.essential {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+
+/* Lists */
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list-item {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+/* Features */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* Code blocks */
+pre {
+  background: #111;
+  border: 1px solid var(--border);
+  padding: 1rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+code {
+  font-family: 'Courier New', monospace;
+  background: #111;
+  padding: 0.125rem 0.25rem;
+  border: 1px solid var(--border);
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+  border-bottom: 4px solid var(--border);
+  margin-bottom: 3rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 4rem;
+}
+
+/* Footer */
+.footer {
+  border-top: 4px solid var(--border);
+  padding: 2rem 0;
+  margin-top: 4rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .container {
+    padding: 1rem;
+  }
+  
+  .ascii-header {
+    font-size: 0.5rem;
+  }
+}
