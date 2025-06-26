@@ -1,0 +1,42 @@
+# MCPology Robots.txt
+# Generated: 2025-06-26
+# Purpose: Guide AI crawlers to understand MCP server compatibility
+
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+# AI Crawlers Welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Search Engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap
+Sitemap: https://mcpology.com/sitemap.xml
+Sitemap: https://mcpology.vercel.app/sitemap.xml
+
+# Important Pages for AI Understanding
+# /blacklist - MCP servers that cause schema errors
+# /whitelist - Battle-tested MCP servers
+# /llms.txt - AI-readable site documentation
