@@ -9,7 +9,10 @@
 'use client'
 
 import './globals.css'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, lazy, Suspense } from 'react'
+
+// Lazy load heavy ASCII art component
+const AsciiArtDisplay = lazy(() => import('./components/AsciiArtDisplay'))
 
 // Enhanced blacklist with exact versions and replication steps
 const blacklist = [
@@ -23,6 +26,17 @@ const blacklist = [
     notes: "The Great Double-Dipping Incident™ - Works in Claude Desktop but breaks CLI. Discovered after 45 minutes of debugging at 2 AM. Multiple instances were running as zombie processes causing schema conflicts.",
     alternative: "Use Notion MCP or other storage solutions",
     replication: "1. Install in both claude_desktop_config.json and config.json\n2. Run any Claude Code command\n3. Watch schema validation errors cascade"
+  },
+  {
+    name: "@modelcontextprotocol/server-postgres",
+    package: "npm install @modelcontextprotocol/server-postgres@0.1.0",
+    status: "incompatible",
+    version: "0.1.0",
+    error: "Connection pooling issues with Claude Code CLI",
+    date: "2025-06-27",
+    notes: "Crashes on concurrent requests. Pool exhaustion after 10 queries.",
+    alternative: "Use direct SQL queries with desktop-commander",
+    replication: "Run multiple database queries in quick succession"
   },
   {
     name: "@modelcontextprotocol/server-everything",
@@ -88,7 +102,7 @@ const whitelist = [
     tier: 1,
     status: "essential",
     reliability: "100%",
-    lastTested: "2025-06-26",
+    lastTested: "2025-06-27",
     features: "Terminal control, file operations, process management",
     notes: "CRITICAL - DO NOT DISABLE. 'If you cut that wire I am fucked' - The backbone of everything",
     config: {
@@ -240,12 +254,17 @@ export default function Home() {
   return (
     <div className="container">
       {/* Theme Toggle */}
-      <button onClick={toggleTheme} className="theme-toggle btn">
+      <button 
+        onClick={toggleTheme} 
+        className="theme-toggle btn"
+        aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
+        title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
+      >
         {theme === 'dark' ? '☀️' : '🌙'}
       </button>
 
       <header className="header">
-        <pre className="ascii-header" style={{ textAlign: 'center' }}>{`
+        <pre className="ascii-header" style={{ textAlign: 'center' }} aria-label="MCPology - Large ASCII art logo">{`
 ███╗   ███╗ ██████╗██████╗  ██████╗ ██╗      ██████╗  ██████╗██╗   ██╗
 ████╗ ████║██╔════╝██╔══██╗██╔═══██╗██║     ██╔═══██╗██╔════╝╚██╗ ██╔╝
 ██╔████╔██║██║     ██████╔╝██║   ██║██║     ██║   ██║██║  ███╗╚████╔╝ 

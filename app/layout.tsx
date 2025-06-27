@@ -6,6 +6,7 @@
 */
 
 import type { Metadata } from 'next'
+import ErrorBoundary from './components/ErrorBoundary'
 
 export const metadata: Metadata = {
   title: 'MCPology - Like mixology, but for AI context servers',
@@ -63,8 +64,36 @@ export default function RootLayout({
             `,
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebApplication',
+              name: 'MCPology',
+              description: 'The definitive reference for Model Context Protocol (MCP) servers',
+              url: 'https://mcpology.com',
+              applicationCategory: 'DeveloperApplication',
+              operatingSystem: 'Any',
+              offers: {
+                '@type': 'Offer',
+                price: '0',
+                priceCurrency: 'USD'
+              },
+              author: {
+                '@type': 'Organization',
+                name: 'd16p ventures',
+                url: 'https://www.d16p.com'
+              }
+            })
+          }}
+        />
       </head>
-      <body>{children}</body>
+      <body>
+        <ErrorBoundary>
+          {children}
+        </ErrorBoundary>
+      </body>
     </html>
   )
 }
